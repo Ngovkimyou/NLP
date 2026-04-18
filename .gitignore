@@ -1,1 +1,26 @@
 frontend.git-backup/
+
+# Editor
+.vscode/
+
+# Environment files
+.env
+.env.*
+backend/.env
+backend/.env.*
+frontend/.env
+frontend/.env.*
+
+# Python
+backend/.venv/
+backend/**/__pycache__/
+backend/**/*.py[cod]
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/next-env.d.ts
+
+# Misc build artifacts
+*.tsbuildinfo
