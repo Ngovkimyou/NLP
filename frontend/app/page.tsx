@@ -8,6 +8,7 @@ const tones = ["Casual", "Polite", "Business"];
 
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+const MAX_INPUT_LENGTH = 100;
 
 type SourceLanguage = "auto" | "english" | "chinese" | "japanese";
 type TargetLanguage = "english" | "chinese" | "japanese";
@@ -79,8 +80,11 @@ export default function Home() {
     null
   );
   const hasInput = inputText.trim().length > 0;
+  const isAtInputLimit = inputText.length >= MAX_INPUT_LENGTH;
   let translationText = "";
-  let detailText = "";
+  let detailText = isAtInputLimit
+    ? `Text limit reached. Please keep translations under ${MAX_INPUT_LENGTH} characters.`
+    : "";
 
   if (hasInput) {
     if (result?.translation) {
@@ -89,7 +93,12 @@ export default function Home() {
       translationText = "Translating...";
     }
 
-    detailText = error || result?.romanization || result?.explanation || "";
+    detailText =
+      error ||
+      detailText ||
+      result?.romanization ||
+      result?.explanation ||
+      "";
   }
 
   useEffect(() => {
@@ -120,13 +129,22 @@ export default function Home() {
         });
 
         if (!response.ok) {
-          throw new Error("Translation request failed.");
+          const errorData = await response.json().catch(() => null);
+          const message =
+            typeof errorData?.detail === "string"
+              ? errorData.detail
+              : "Translation request failed.";
+          throw new Error(message);
         }
 
         const data: TranslationResponse = await response.json();
         setResult(data);
-      } catch {
-        setError("Unable to reach the backend. Make sure FastAPI is running.");
+      } catch (requestError) {
+        setError(
+          requestError instanceof Error
+            ? requestError.message
+            : "Unable to reach the backend. Make sure FastAPI is running."
+        );
       } finally {
         setIsLoading(false);
       }
@@ -205,8 +223,19 @@ export default function Home() {
                 className="min-h-22 w-full resize-none bg-transparent text-[15px] leading-6 text-slate-50 outline-none placeholder:text-slate-500 sm:min-h-28 sm:text-base md:min-h-55 md:text-[18px] md:leading-8 lg:min-h-80 lg:text-[22px] lg:leading-9"
                 placeholder="Enter text..."
                 value={inputText}
-                onChange={(event) => setInputText(event.target.value)}
+                maxLength={MAX_INPUT_LENGTH}
+                onChange={(event) =>
+                  setInputText(event.target.value.slice(0, MAX_INPUT_LENGTH))
+                }
               />
+              <div className="mt-3 text-right text-xs font-medium text-cyan-100/55">
+                {inputText.length}/{MAX_INPUT_LENGTH}
+              </div>
+              {isAtInputLimit && (
+                <p className="mt-2 text-right text-xs font-semibold text-amber-200">
+                  Text limit reached. Please shorten your input.
+                </p>
+              )}
             </PanelShell>
 
             <PanelShell accent="fuchsia">

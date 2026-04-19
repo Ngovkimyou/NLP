@@ -38,3 +38,8 @@ The API will run at `http://localhost:8000`.
 - `GET /`
 - `GET /health`
 - `POST /translate`
+
+## Request Limits
+
+- Translation text is limited to 100 characters.
+- `POST /translate` is limited to 10 requests per minute per client.

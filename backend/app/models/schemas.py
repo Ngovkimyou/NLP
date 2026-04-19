@@ -9,7 +9,12 @@ Tone = Literal["casual", "polite", "business"]
 
 
 class TranslationRequest(BaseModel):
-    text: str = Field(..., min_length=1, description="Text to translate.")
+    text: str = Field(
+        ...,
+        min_length=1,
+        max_length=100,
+        description="Text to translate.",
+    )
     source_language: Language = "auto"
     target_language: TargetLanguage
     tone: Tone = "polite"
