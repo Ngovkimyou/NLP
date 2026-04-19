@@ -7,5 +7,5 @@ router = APIRouter(prefix="/translate", tags=["translate"])
 
 
 @router.post("", response_model=TranslationResponse)
-def translate(payload: TranslationRequest) -> TranslationResponse:
+def translate(payload: TranslationRequest):
     return build_translation(payload)

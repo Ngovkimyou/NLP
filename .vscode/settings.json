@@ -4,6 +4,8 @@
     "dotenv",
     "fastapi",
     "httpx",
-    "uvicorn"
+    "pycache",
+    "uvicorn",
+    "venv"
   ]
 }

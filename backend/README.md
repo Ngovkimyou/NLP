@@ -4,7 +4,7 @@
 
 ```powershell
 python -m venv .venv
-.venv\Scripts\activate
+.\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
@@ -23,7 +23,7 @@ DEEPL_API_KEY=your_real_key_here
 DEEPL_API_URL=https://api-free.deepl.com/v2/translate
 ```
 
-If `DEEPL_API_KEY` is missing, the app falls back to mock translations.
+If `DEEPL_API_KEY` is missing, the API returns a clear configuration error instead of translating.
 
 ## Run
 

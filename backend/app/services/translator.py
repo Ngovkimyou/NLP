@@ -1,6 +1,7 @@
 import os
 
 import httpx
+from fastapi import HTTPException
 
 from app.models.schemas import (
     AmbiguousTerm,
@@ -44,38 +45,10 @@ def detect_language(text: str, source_language: str) -> str:
     return "english"
 
 
-def build_mock_translation(payload: TranslationRequest) -> TranslationResponse:
-    detected_language = detect_language(payload.text, payload.source_language)
-
-    translation_map = {
-        ("english", "japanese", "polite"): (
-            "明日ファイルを送っていただけますか。会議で必要です。",
-            "Ashita fairu o okutte itadakemasu ka. Kaigi de hitsuyo desu.",
-            "A polite request form was chosen to match a professional tone.",
-        ),
-        ("english", "japanese", "casual"): (
-            "明日ファイル送ってくれる？会議で必要なんだ。",
-            "Ashita fairu okutte kureru? Kaigi de hitsuyo nanda.",
-            "A casual tone uses a lighter and more direct request style.",
-        ),
-        ("english", "japanese", "business"): (
-            "明日ファイルをお送りいただけますでしょうか。会議にて必要となります。",
-            "Ashita fairu o o-okuri itadakemasu desho ka. Kaigi nite hitsuyo to narimasu.",
-            "Business tone uses more formal phrasing suitable for workplace communication.",
-        ),
-    }
-
-    translation, romanization, explanation = translation_map.get(
-        (detected_language, payload.target_language, payload.tone),
-        (
-            f"[Mock] {payload.text}",
-            None,
-            "This is a placeholder response until a real translation model is connected.",
-        ),
-    )
-
+def get_ambiguous_terms(text: str) -> list[AmbiguousTerm]:
     ambiguous_terms = []
-    lowered_text = payload.text.lower()
+    lowered_text = text.lower()
+
     if "file" in lowered_text:
         ambiguous_terms.append(
             AmbiguousTerm(
@@ -93,20 +66,15 @@ def build_mock_translation(payload: TranslationRequest) -> TranslationResponse:
             )
         )
 
-    return TranslationResponse(
-        detected_language=detected_language,
-        target_language=payload.target_language,
-        tone=payload.tone,
-        translation=translation,
-        romanization=romanization,
-        explanation=explanation,
-        ambiguous_terms=ambiguous_terms,
-    )
+    return ambiguous_terms
 
 
 def build_translation(payload: TranslationRequest) -> TranslationResponse:
     if not DEEPL_API_KEY:
-        return build_mock_translation(payload)
+        raise HTTPException(
+            status_code=503,
+            detail="Translation service is not configured. Please set DEEPL_API_KEY in the backend environment.",
+        )
 
     detected_language = detect_language(payload.text, payload.source_language)
     request_body: dict[str, object] = {
@@ -141,25 +109,6 @@ def build_translation(payload: TranslationRequest) -> TranslationResponse:
         LANGUAGE_CODE_MAP.get(detected_language, "EN"),
     )
 
-    ambiguous_terms = []
-    lowered_text = payload.text.lower()
-    if "file" in lowered_text:
-        ambiguous_terms.append(
-            AmbiguousTerm(
-                term="file",
-                chosen_meaning="digital document",
-                other_meanings=["paper folder", "official record"],
-            )
-        )
-    if "meeting" in lowered_text:
-        ambiguous_terms.append(
-            AmbiguousTerm(
-                term="meeting",
-                chosen_meaning="work discussion",
-                other_meanings=["social gathering"],
-            )
-        )
-
     explanation = (
         "Translated with DeepL. Tone is guided using custom instructions, and"
         " formality is also applied when the target language supports it."
@@ -176,5 +125,5 @@ def build_translation(payload: TranslationRequest) -> TranslationResponse:
         translation=translated_text,
         romanization=None,
         explanation=explanation,
-        ambiguous_terms=ambiguous_terms,
+        ambiguous_terms=get_ambiguous_terms(payload.text),
     )
