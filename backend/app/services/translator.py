@@ -48,6 +48,7 @@ TONE_TO_INSTRUCTION = {
 FORMALITY_SUPPORTED_TARGETS = {"japanese"}
 _JAPANESE_ROMANIZER = None
 PUNCTUATION_SPACING_PATTERN = re.compile(r"\s+([,.!?;:。！？、，；：])")
+JAPANESE_SCRIPT_MARKERS = {"々", "〆", "ヶ", "ヵ", "ゝ", "ゞ", "ヽ", "ヾ"}
 MEANINGS_DIR = Path(__file__).resolve().parents[1] / "data" / "meanings"
 MEANING_LANGUAGE_FILE_MAP = {
     "english": "en.json",
@@ -60,8 +61,9 @@ def detect_language(text: str, source_language: str) -> str:
     if source_language != "auto":
         return source_language
 
-    # Simple placeholder detection until a real language detector is added.
     if any("\u3040" <= char <= "\u30ff" for char in text):
+        return "japanese"
+    if any(char in JAPANESE_SCRIPT_MARKERS for char in text):
         return "japanese"
     if any("\u4e00" <= char <= "\u9fff" for char in text):
         return "chinese"
