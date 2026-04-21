@@ -1,1 +1,6 @@
-frontier=vercel.json
+.env
+.venv
+__pycache__
+*.pyc
+.git
+tests/

@@ -7,12 +7,12 @@ const targetLanguages = ["English", "Chinese", "Japanese"];
 const tones = ["Casual", "Polite", "Business"];
 
 const API_BASE_URL = (() => {
-  if (globalThis.window && globalThis.window.location.hostname !== "localhost") {
-    // Production: use relative path that Vercel will route to backend
+  const env = process.env.NEXT_PUBLIC_API_URL;
+  if (env && env.length > 0) return env;
+  if (typeof globalThis !== "undefined" && globalThis.window && globalThis.window.location.hostname !== "localhost") {
     return "/_/backend";
   }
-  // Development: use environment variable or default
-  return process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+  return "http://localhost:8000";
 })();
 const MAX_INPUT_LENGTH = 100;
 const COPY_STATUS_DURATION_MS = 1800;
