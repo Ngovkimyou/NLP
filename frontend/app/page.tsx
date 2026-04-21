@@ -105,6 +105,7 @@ export default function Home() {
     null
   );
   const skipNextAutoTranslateRef = useRef(false);
+  const requestIdRef = useRef(0);
   const hasInput = inputText.trim().length > 0;
   const isAtInputLimit = inputText.length >= MAX_INPUT_LENGTH;
   const meaningTerms = result?.ambiguous_terms ?? [];
@@ -138,13 +139,15 @@ export default function Home() {
   }
 
   const startTranslation = useCallback(
-    async (textToTranslate: string) => {
+    async (textToTranslate: string, saveToHistory = true) => {
       const trimmedText = textToTranslate.trim();
 
       if (!trimmedText) {
         return;
       }
 
+      const requestId = requestIdRef.current + 1;
+      requestIdRef.current = requestId;
       setIsLoading(true);
       setError(null);
       setCopyStatus(null);
@@ -173,26 +176,44 @@ export default function Home() {
         }
 
         const data: TranslationResponse = await response.json();
+        if (requestId !== requestIdRef.current) {
+          return;
+        }
+
         setResult(data);
-        setTranslationHistory((currentHistory) => [
-          {
-            id: Date.now(),
-            input: trimmedText,
-            sourceLanguage,
-            targetLanguage,
-            tone,
-            result: data,
-          },
-          ...currentHistory,
-        ].slice(0, 10));
+        if (saveToHistory) {
+          setTranslationHistory((currentHistory) => [
+            {
+              id: Date.now(),
+              input: trimmedText,
+              sourceLanguage,
+              targetLanguage,
+              tone,
+              result: data,
+            },
+            ...currentHistory.filter(
+              (item) =>
+                item.input !== trimmedText ||
+                item.sourceLanguage !== sourceLanguage ||
+                item.targetLanguage !== targetLanguage ||
+                item.tone !== tone
+            ),
+          ].slice(0, 10));
+        }
       } catch (requestError) {
+        if (requestId !== requestIdRef.current) {
+          return;
+        }
+
         setError(
           requestError instanceof Error
             ? requestError.message
             : "Unable to reach the backend. Make sure FastAPI is running."
         );
       } finally {
-        setIsLoading(false);
+        if (requestId === requestIdRef.current) {
+          setIsLoading(false);
+        }
       }
     },
     [sourceLanguage, targetLanguage, tone]
@@ -220,7 +241,7 @@ export default function Home() {
     }
 
     debounceRef.current = globalThis.setTimeout(() => {
-      void startTranslation(inputText);
+      void startTranslation(inputText, false);
     }, 450);
 
     return () => {
@@ -536,7 +557,7 @@ export default function Home() {
 
                 {translationHistory.length === 0 ? (
                   <p className="flex flex-1 items-center text-sm leading-6 text-cyan-100/70 sm:text-base">
-                    No translations yet.
+                    Click Translate above to save a completed translation here.
                   </p>
                 ) : (
                   <div className="grid flex-1 gap-3 pt-4 lg:grid-cols-2">
