@@ -70,9 +70,7 @@ export default function Home() {
   const [sourceLanguage, setSourceLanguage] = useState<SourceLanguage>("auto");
   const [targetLanguage, setTargetLanguage] = useState<TargetLanguage>("japanese");
   const [tone, setTone] = useState<Tone>("polite");
-  const [inputText, setInputText] = useState(
-    "Can you send me the file tomorrow? I need it for the meeting."
-  );
+  const [inputText, setInputText] = useState("");
   const [result, setResult] = useState<TranslationResponse | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -81,10 +79,12 @@ export default function Home() {
   );
   const hasInput = inputText.trim().length > 0;
   const isAtInputLimit = inputText.length >= MAX_INPUT_LENGTH;
+  const meaningTerms = result?.ambiguous_terms ?? [];
   let translationText = "";
   let detailText = isAtInputLimit
     ? `Text limit reached. Please keep translations under ${MAX_INPUT_LENGTH} characters.`
     : "";
+  let meaningsStatus = "Awaiting input.";
 
   if (hasInput) {
     if (result?.translation) {
@@ -99,10 +99,23 @@ export default function Home() {
       result?.romanization ||
       result?.explanation ||
       "";
+
+    if (error) {
+      meaningsStatus = "Meaning scan is paused until translation succeeds.";
+    } else if (isLoading) {
+      meaningsStatus = "Scanning possible meanings...";
+    } else if (meaningTerms.length === 0) {
+      meaningsStatus = "No tracked ambiguous words found.";
+    } else {
+      meaningsStatus = "";
+    }
   }
 
   useEffect(() => {
     if (!hasInput) {
+      if (debounceRef.current) {
+        globalThis.clearTimeout(debounceRef.current);
+      }
       return;
     }
 
@@ -157,15 +170,55 @@ export default function Home() {
     };
   }, [hasInput, inputText, sourceLanguage, targetLanguage, tone]);
 
+  function handleInputChange(value: string) {
+    const nextValue = value.slice(0, MAX_INPUT_LENGTH);
+
+    setInputText(nextValue);
+
+    if (nextValue.trim().length === 0) {
+      if (debounceRef.current) {
+        globalThis.clearTimeout(debounceRef.current);
+      }
+
+      setResult(null);
+      setError(null);
+      setIsLoading(false);
+    }
+  }
+
   function handleSwap() {
-    if (sourceLanguage === "auto") {
-      setSourceLanguage(targetLanguage);
-      setTargetLanguage("english");
+    const previousInput = inputText;
+    const previousTranslation = result?.translation ?? "";
+    const nextSourceLanguage: SourceLanguage = targetLanguage;
+    const nextTargetLanguage: TargetLanguage =
+      sourceLanguage === "auto"
+        ? result?.detected_language ?? "english"
+        : (sourceLanguage as TargetLanguage);
+
+    if (debounceRef.current) {
+      globalThis.clearTimeout(debounceRef.current);
+    }
+
+    setSourceLanguage(nextSourceLanguage);
+    setTargetLanguage(nextTargetLanguage);
+    setError(null);
+    setIsLoading(false);
+
+    if (previousTranslation.trim().length === 0) {
+      setResult(null);
       return;
     }
 
-    setSourceLanguage(targetLanguage);
-    setTargetLanguage(sourceLanguage as TargetLanguage);
+    setInputText(previousTranslation.slice(0, MAX_INPUT_LENGTH));
+    setResult({
+      detected_language: nextSourceLanguage,
+      target_language: nextTargetLanguage,
+      tone,
+      translation: previousInput,
+      romanization: null,
+      explanation: "",
+      ambiguous_terms: [],
+    });
   }
 
   return (
@@ -224,9 +277,7 @@ export default function Home() {
                 placeholder="Enter text..."
                 value={inputText}
                 maxLength={MAX_INPUT_LENGTH}
-                onChange={(event) =>
-                  setInputText(event.target.value.slice(0, MAX_INPUT_LENGTH))
-                }
+                onChange={(event) => handleInputChange(event.target.value)}
               />
               <div className="mt-3 text-right text-xs font-medium text-cyan-100/55">
                 {inputText.length}/{MAX_INPUT_LENGTH}
@@ -248,6 +299,55 @@ export default function Home() {
                 <div className="mt-4 border-t border-white/8 pt-4 text-[13px] leading-6 text-cyan-100/70 sm:text-sm md:mt-5 md:pt-5 md:leading-7">
                   {detailText}
                 </div>
+              </div>
+            </PanelShell>
+
+            <PanelShell accent="cyan" className="xl:col-span-2">
+              <div className="flex min-h-50 flex-col">
+                <div className="flex items-center justify-between gap-3 border-b border-white/8 pb-3">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-100/55">
+                    Possible Meaning
+                  </p>
+                  <p className="shrink-0 text-xs font-medium text-fuchsia-100/60">
+                    {meaningTerms.length} found
+                  </p>
+                </div>
+
+                {meaningsStatus ? (
+                  <p className="flex flex-1 items-center text-[15px] leading-6 text-cyan-100/70 sm:text-base">
+                    {meaningsStatus}
+                  </p>
+                ) : (
+                  <div className="grid flex-1 gap-3 pt-4 md:grid-cols-2">
+                    {meaningTerms.map((item) => (
+                      <article
+                        key={item.term}
+                        className="rounded-2xl border border-white/8 bg-white/3 p-4"
+                      >
+                        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                          <h2 className="text-lg font-semibold text-white">
+                            {item.term}
+                          </h2>
+                        </div>
+                        <p className="mt-2 text-sm leading-6 text-cyan-50/85">
+                          {item.chosen_meaning}
+                        </p>
+                        {item.other_meanings.length > 0 && (
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {item.other_meanings.map((meaning) => (
+                              <span
+                                key={meaning}
+                                className="rounded-full border border-fuchsia-200/12 bg-fuchsia-200/8 px-3 py-1 text-xs font-medium text-fuchsia-50/78"
+                              >
+                                {meaning}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </article>
+                    ))}
+                  </div>
+                )}
               </div>
             </PanelShell>
           </section>
@@ -324,10 +424,12 @@ function PanelShell({
   children,
   accent,
   compactOnMobile = false,
+  className = "",
 }: Readonly<{
   children: React.ReactNode;
   accent: "cyan" | "fuchsia";
   compactOnMobile?: boolean;
+  className?: string;
 }>) {
   const accentStyles = {
     cyan: "before:from-cyan-300/70 before:via-cyan-200/0 border-cyan-300/10 shadow-[0_0_0_1px_rgba(34,211,238,0.04)]",
@@ -337,7 +439,7 @@ function PanelShell({
 
   return (
     <section
-      className={`rounded-[22px] border bg-[linear-gradient(180deg,rgba(23,31,64,0.95),rgba(13,19,39,0.98))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] sm:rounded-3xl md:rounded-[28px] md:p-4 lg:rounded-[30px] ${compactOnMobile ? "min-h-37.5 sm:min-h-43 md:min-h-75" : "min-h-55 sm:min-h-60 md:min-h-75"} ${accentStyles[accent]}`}
+      className={`rounded-[22px] border bg-[linear-gradient(180deg,rgba(23,31,64,0.95),rgba(13,19,39,0.98))] p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] sm:rounded-3xl md:rounded-[28px] md:p-4 lg:rounded-[30px] ${compactOnMobile ? "min-h-37.5 sm:min-h-43 md:min-h-75" : "min-h-55 sm:min-h-60 md:min-h-75"} ${accentStyles[accent]} ${className}`}
     >
       <div
         className={`relative h-full rounded-[18px] border border-white/8 bg-[linear-gradient(180deg,rgba(8,15,32,0.95),rgba(7,13,28,0.98))] p-4 before:pointer-events-none before:absolute before:left-4 before:top-0 before:h-px before:w-20 before:bg-linear-to-r before:to-transparent sm:rounded-[20px] md:rounded-[22px] md:p-5 md:before:left-5 md:before:w-28 ${accentStyles[accent]}`}

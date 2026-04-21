@@ -3,9 +3,16 @@
     "DEEPL",
     "dotenv",
     "fastapi",
+    "hira",
     "httpx",
+    "kakasi",
     "popleft",
     "pycache",
+    "pykakasi",
+    "pypinyin",
+    "Romaji",
+    "ROMANIZER",
+    "sokuon",
     "uvicorn",
     "venv"
   ]

@@ -1,0 +1,696 @@
+{
+  "address": {
+    "chosen_meaning": "place where someone lives or receives mail",
+    "other_meanings": [
+      "speak to someone",
+      "deal with a problem"
+    ]
+  },
+  "arm": {
+    "chosen_meaning": "body part from shoulder to hand",
+    "other_meanings": [
+      "weapon",
+      "branch of an organization",
+      "prepare with weapons"
+    ]
+  },
+  "bank": {
+    "chosen_meaning": "financial institution",
+    "other_meanings": [
+      "side of a river",
+      "tilt an aircraft while turning"
+    ]
+  },
+  "bat": {
+    "chosen_meaning": "flying mammal",
+    "other_meanings": [
+      "sports stick",
+      "take a turn hitting a ball"
+    ]
+  },
+  "book": {
+    "chosen_meaning": "written work with pages",
+    "other_meanings": [
+      "reserve something",
+      "record an entry"
+    ]
+  },
+  "break": {
+    "chosen_meaning": "separate into pieces",
+    "other_meanings": [
+      "short rest",
+      "violate a rule",
+      "begin suddenly"
+    ]
+  },
+  "can": {
+    "chosen_meaning": "be able to",
+    "other_meanings": [
+      "metal container",
+      "preserve food in a container"
+    ]
+  },
+  "charge": {
+    "chosen_meaning": "cost or fee",
+    "other_meanings": [
+      "accuse formally",
+      "store electrical energy",
+      "rush forward"
+    ]
+  },
+  "clear": {
+    "chosen_meaning": "easy to understand",
+    "other_meanings": [
+      "remove something",
+      "free from obstruction",
+      "transparent"
+    ]
+  },
+  "date": {
+    "chosen_meaning": "calendar day",
+    "other_meanings": [
+      "romantic meeting",
+      "fruit from a palm tree"
+    ]
+  },
+  "draft": {
+    "chosen_meaning": "early version of writing",
+    "other_meanings": [
+      "current of air",
+      "select someone for service",
+      "bank payment order"
+    ]
+  },
+  "fair": {
+    "chosen_meaning": "reasonable and just",
+    "other_meanings": [
+      "public event with stalls or rides",
+      "light in color",
+      "moderately good"
+    ]
+  },
+  "file": {
+    "chosen_meaning": "digital document",
+    "other_meanings": [
+      "paper folder",
+      "official record",
+      "submit a document",
+      "tool for smoothing rough surfaces"
+    ]
+  },
+  "fine": {
+    "chosen_meaning": "good or acceptable",
+    "other_meanings": [
+      "money paid as a penalty",
+      "very thin or small",
+      "delicate in quality"
+    ]
+  },
+  "kind": {
+    "chosen_meaning": "type or category",
+    "other_meanings": [
+      "caring and helpful"
+    ]
+  },
+  "last": {
+    "chosen_meaning": "final",
+    "other_meanings": [
+      "continue for a period of time",
+      "most recent"
+    ]
+  },
+  "light": {
+    "chosen_meaning": "brightness",
+    "other_meanings": [
+      "not heavy",
+      "pale in color",
+      "ignite something"
+    ]
+  },
+  "match": {
+    "chosen_meaning": "contest between opponents",
+    "other_meanings": [
+      "small stick for lighting fire",
+      "thing that corresponds"
+    ]
+  },
+  "meeting": {
+    "chosen_meaning": "work discussion",
+    "other_meanings": [
+      "social gathering",
+      "act of coming together"
+    ]
+  },
+  "note": {
+    "chosen_meaning": "short written message",
+    "other_meanings": [
+      "musical sound",
+      "notice or mention",
+      "paper money"
+    ]
+  },
+  "park": {
+    "chosen_meaning": "public green space",
+    "other_meanings": [
+      "leave a vehicle somewhere",
+      "temporarily set something aside"
+    ]
+  },
+  "plant": {
+    "chosen_meaning": "living organism that grows in soil",
+    "other_meanings": [
+      "factory",
+      "secretly place something"
+    ]
+  },
+  "point": {
+    "chosen_meaning": "specific idea or detail",
+    "other_meanings": [
+      "sharp end",
+      "score unit",
+      "direct attention toward something"
+    ]
+  },
+  "right": {
+    "chosen_meaning": "correct",
+    "other_meanings": [
+      "opposite of left",
+      "legal entitlement",
+      "political position"
+    ]
+  },
+  "scale": {
+    "chosen_meaning": "range used for measuring",
+    "other_meanings": [
+      "weighing device",
+      "fish or reptile plate",
+      "climb something"
+    ]
+  },
+  "sentence": {
+    "chosen_meaning": "group of words expressing a complete thought",
+    "other_meanings": [
+      "punishment assigned by a court"
+    ]
+  },
+  "spring": {
+    "chosen_meaning": "season after winter",
+    "other_meanings": [
+      "coil of metal",
+      "jump suddenly",
+      "source of water"
+    ]
+  },
+  "term": {
+    "chosen_meaning": "word or phrase with a specific meaning",
+    "other_meanings": [
+      "period of time",
+      "condition in an agreement"
+    ]
+  },
+  "watch": {
+    "chosen_meaning": "small timepiece",
+    "other_meanings": [
+      "look at carefully",
+      "period of guard duty"
+    ]
+  },
+  "well": {
+    "chosen_meaning": "in a good or proper way",
+    "other_meanings": [
+      "source of water",
+      "healthy",
+      "used to begin a response"
+    ]
+  },
+  "case": {
+    "chosen_meaning": "situation or example",
+    "other_meanings": [
+      "container",
+      "legal matter",
+      "grammar form"
+    ]
+  },
+  "mean": {
+    "chosen_meaning": "to signify",
+    "other_meanings": [
+      "unkind",
+      "average",
+      "intend"
+    ]
+  },
+  "left": {
+    "chosen_meaning": "opposite of right",
+    "other_meanings": [
+      "remaining",
+      "departed",
+      "political side"
+    ]
+  },
+  "sound": {
+    "chosen_meaning": "something heard",
+    "other_meanings": [
+      "healthy or reliable",
+      "body of water",
+      "to seem"
+    ]
+  },
+  "object": {
+    "chosen_meaning": "thing",
+    "other_meanings": [
+      "goal",
+      "to disagree"
+    ]
+  },
+  "close": {
+    "chosen_meaning": "near",
+    "other_meanings": [
+      "shut",
+      "end",
+      "intimate"
+    ]
+  },
+  "present": {
+    "chosen_meaning": "current time",
+    "other_meanings": [
+      "gift",
+      "to show or introduce",
+      "being in a place"
+    ]
+  },
+  "record": {
+    "chosen_meaning": "written or stored information",
+    "other_meanings": [
+      "best performance",
+      "to capture audio or video"
+    ]
+  },
+  "seal": {
+    "chosen_meaning": "close tightly",
+    "other_meanings": [
+      "official mark",
+      "marine animal"
+    ]
+  },
+  "trip": {
+    "chosen_meaning": "journey",
+    "other_meanings": [
+      "stumble",
+      "activate accidentally"
+    ]
+  },
+  "angle": {
+    "chosen_meaning": "space between two lines or surfaces",
+    "other_meanings": [
+      "point of view",
+      "to fish with a hook",
+      "to present something from a bias"
+    ]
+  },
+  "bark": {
+    "chosen_meaning": "sound made by a dog",
+    "other_meanings": [
+      "outer covering of a tree",
+      "speak sharply"
+    ]
+  },
+  "base": {
+    "chosen_meaning": "bottom or foundation",
+    "other_meanings": [
+      "military station",
+      "starting point",
+      "chemical substance that neutralizes acid"
+    ]
+  },
+  "board": {
+    "chosen_meaning": "flat piece of wood or material",
+    "other_meanings": [
+      "group of directors",
+      "meals provided for payment",
+      "get on a vehicle"
+    ]
+  },
+  "bound": {
+    "chosen_meaning": "certain or likely",
+    "other_meanings": [
+      "tied",
+      "jump",
+      "heading toward a destination"
+    ]
+  },
+  "capital": {
+    "chosen_meaning": "city where a government is based",
+    "other_meanings": [
+      "money used for investment",
+      "uppercase letter",
+      "excellent"
+    ]
+  },
+  "cell": {
+    "chosen_meaning": "small biological unit",
+    "other_meanings": [
+      "small prison room",
+      "spreadsheet box",
+      "battery unit"
+    ]
+  },
+  "club": {
+    "chosen_meaning": "organization for shared interests",
+    "other_meanings": [
+      "heavy stick",
+      "night entertainment venue",
+      "playing card suit"
+    ]
+  },
+  "court": {
+    "chosen_meaning": "place where legal cases are heard",
+    "other_meanings": [
+      "sports playing area",
+      "royal household",
+      "try to gain someone's favor"
+    ]
+  },
+  "current": {
+    "chosen_meaning": "happening now",
+    "other_meanings": [
+      "flow of water or air",
+      "flow of electricity"
+    ]
+  },
+  "deck": {
+    "chosen_meaning": "flat surface on a ship or building",
+    "other_meanings": [
+      "set of cards",
+      "presentation slides",
+      "knock someone down"
+    ]
+  },
+  "draw": {
+    "chosen_meaning": "make a picture",
+    "other_meanings": [
+      "pull",
+      "attract",
+      "game with no winner"
+    ]
+  },
+  "drop": {
+    "chosen_meaning": "let something fall",
+    "other_meanings": [
+      "small amount of liquid",
+      "decrease",
+      "stop doing something"
+    ]
+  },
+  "fan": {
+    "chosen_meaning": "person who supports something",
+    "other_meanings": [
+      "device that moves air",
+      "spread out in a fan shape"
+    ]
+  },
+  "figure": {
+    "chosen_meaning": "number or amount",
+    "other_meanings": [
+      "shape of a person",
+      "important person",
+      "understand or calculate"
+    ]
+  },
+  "firm": {
+    "chosen_meaning": "company or business",
+    "other_meanings": [
+      "solid",
+      "determined",
+      "make more stable"
+    ]
+  },
+  "fit": {
+    "chosen_meaning": "suitable or the right size",
+    "other_meanings": [
+      "healthy",
+      "sudden attack or outburst",
+      "install into place"
+    ]
+  },
+  "flat": {
+    "chosen_meaning": "level and even",
+    "other_meanings": [
+      "apartment",
+      "without emotion",
+      "musical note lowered by a semitone"
+    ]
+  },
+  "fly": {
+    "chosen_meaning": "move through the air",
+    "other_meanings": [
+      "small insect",
+      "zipper opening on clothing",
+      "travel by aircraft"
+    ]
+  },
+  "foot": {
+    "chosen_meaning": "body part at the end of a leg",
+    "other_meanings": [
+      "unit of length",
+      "bottom of something",
+      "pay a bill"
+    ]
+  },
+  "ground": {
+    "chosen_meaning": "surface of the earth",
+    "other_meanings": [
+      "reason or basis",
+      "electrical connection",
+      "punish by restricting activities"
+    ]
+  },
+  "jam": {
+    "chosen_meaning": "fruit preserve",
+    "other_meanings": [
+      "traffic blockage",
+      "force into a tight space",
+      "informal music session"
+    ]
+  },
+  "key": {
+    "chosen_meaning": "object used to open a lock",
+    "other_meanings": [
+      "important",
+      "keyboard button",
+      "musical scale"
+    ]
+  },
+  "land": {
+    "chosen_meaning": "solid ground",
+    "other_meanings": [
+      "country or territory",
+      "arrive by aircraft",
+      "obtain something"
+    ]
+  },
+  "letter": {
+    "chosen_meaning": "written message",
+    "other_meanings": [
+      "character of the alphabet",
+      "official document"
+    ]
+  },
+  "line": {
+    "chosen_meaning": "long thin mark",
+    "other_meanings": [
+      "queue",
+      "row of words",
+      "phone connection",
+      "area of work or product"
+    ]
+  },
+  "major": {
+    "chosen_meaning": "very important or large",
+    "other_meanings": [
+      "college subject",
+      "military rank",
+      "musical scale"
+    ]
+  },
+  "mark": {
+    "chosen_meaning": "visible sign or stain",
+    "other_meanings": [
+      "grade or score",
+      "notice or celebrate",
+      "target"
+    ]
+  },
+  "mine": {
+    "chosen_meaning": "belonging to me",
+    "other_meanings": [
+      "place where minerals are dug",
+      "explosive device",
+      "extract minerals"
+    ]
+  },
+  "minor": {
+    "chosen_meaning": "small or less important",
+    "other_meanings": [
+      "person under legal age",
+      "secondary college subject",
+      "musical scale"
+    ]
+  },
+  "model": {
+    "chosen_meaning": "representation or example",
+    "other_meanings": [
+      "person who displays clothes",
+      "version of a product",
+      "to demonstrate"
+    ]
+  },
+  "mole": {
+    "chosen_meaning": "small animal that digs underground",
+    "other_meanings": [
+      "dark spot on skin",
+      "spy inside an organization",
+      "unit in chemistry"
+    ]
+  },
+  "novel": {
+    "chosen_meaning": "long fictional book",
+    "other_meanings": [
+      "new or unusual"
+    ]
+  },
+  "order": {
+    "chosen_meaning": "request to buy or receive something",
+    "other_meanings": [
+      "sequence",
+      "command",
+      "state of organization"
+    ]
+  },
+  "page": {
+    "chosen_meaning": "sheet in a book or document",
+    "other_meanings": [
+      "web screen",
+      "young assistant",
+      "call someone through a speaker or device"
+    ]
+  },
+  "pitch": {
+    "chosen_meaning": "throw a ball",
+    "other_meanings": [
+      "sound frequency",
+      "sales presentation",
+      "playing field"
+    ]
+  },
+  "plain": {
+    "chosen_meaning": "simple or ordinary",
+    "other_meanings": [
+      "large flat area of land",
+      "clear and obvious",
+      "without decoration"
+    ]
+  },
+  "pool": {
+    "chosen_meaning": "small body of water for swimming",
+    "other_meanings": [
+      "shared supply of resources",
+      "billiards game",
+      "collect together"
+    ]
+  },
+  "press": {
+    "chosen_meaning": "push firmly",
+    "other_meanings": [
+      "news media",
+      "printing machine",
+      "urge strongly"
+    ]
+  },
+  "range": {
+    "chosen_meaning": "distance or set of values between limits",
+    "other_meanings": [
+      "cooking stove",
+      "area for shooting practice",
+      "mountain chain"
+    ]
+  },
+  "ring": {
+    "chosen_meaning": "circular piece of jewelry",
+    "other_meanings": [
+      "sound of a bell or phone",
+      "circular shape",
+      "group involved in an activity"
+    ]
+  },
+  "rock": {
+    "chosen_meaning": "stone",
+    "other_meanings": [
+      "move back and forth",
+      "music genre",
+      "shake or disturb"
+    ]
+  },
+  "roll": {
+    "chosen_meaning": "move by turning over",
+    "other_meanings": [
+      "bread item",
+      "list of names",
+      "coil or cylinder"
+    ]
+  },
+  "root": {
+    "chosen_meaning": "part of a plant under the ground",
+    "other_meanings": [
+      "origin or cause",
+      "mathematical value",
+      "support a team"
+    ]
+  },
+  "run": {
+    "chosen_meaning": "move quickly on foot",
+    "other_meanings": [
+      "operate",
+      "manage",
+      "flow",
+      "compete in an election"
+    ]
+  },
+  "season": {
+    "chosen_meaning": "part of the year with particular weather",
+    "other_meanings": [
+      "add flavor",
+      "period of events or episodes"
+    ]
+  },
+  "ship": {
+    "chosen_meaning": "large boat",
+    "other_meanings": [
+      "send goods",
+      "support a romantic pairing"
+    ]
+  },
+  "sink": {
+    "chosen_meaning": "basin for washing",
+    "other_meanings": [
+      "go down below a surface",
+      "decline",
+      "absorb"
+    ]
+  },
+  "tie": {
+    "chosen_meaning": "fasten with string or a knot",
+    "other_meanings": [
+      "equal score",
+      "formal neckwear",
+      "connection or relationship"
+    ]
+  },
+  "wave": {
+    "chosen_meaning": "moving ridge of water",
+    "other_meanings": [
+      "gesture with the hand",
+      "surge or increase",
+      "pattern of energy"
+    ]
+  }
+}

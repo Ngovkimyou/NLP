@@ -1,0 +1,658 @@
+{
+  "行": {
+    "chosen_meaning": "to be okay or acceptable",
+    "other_meanings": [
+      "row or line",
+      "business or profession",
+      "to walk or travel"
+    ]
+  },
+  "会": {
+    "chosen_meaning": "can or be able to",
+    "other_meanings": [
+      "meeting",
+      "association",
+      "to understand",
+      "will happen"
+    ]
+  },
+  "生": {
+    "chosen_meaning": "life or birth",
+    "other_meanings": [
+      "raw",
+      "student",
+      "fresh",
+      "to grow"
+    ]
+  },
+  "上": {
+    "chosen_meaning": "up or above",
+    "other_meanings": [
+      "previous",
+      "to go onto",
+      "to attend",
+      "superior"
+    ]
+  },
+  "下": {
+    "chosen_meaning": "down or below",
+    "other_meanings": [
+      "next",
+      "to leave or get off",
+      "to place",
+      "under"
+    ]
+  },
+  "开": {
+    "chosen_meaning": "to open",
+    "other_meanings": [
+      "to start",
+      "to drive",
+      "to hold an event",
+      "to turn on"
+    ]
+  },
+  "打": {
+    "chosen_meaning": "to hit",
+    "other_meanings": [
+      "to make a phone call",
+      "to play a game",
+      "to type",
+      "to fetch or buy"
+    ]
+  },
+  "看": {
+    "chosen_meaning": "to look at or watch",
+    "other_meanings": [
+      "to read",
+      "to visit",
+      "to think or consider"
+    ]
+  },
+  "发": {
+    "chosen_meaning": "to send or issue",
+    "other_meanings": [
+      "to become",
+      "to develop",
+      "hair",
+      "to make a sound"
+    ]
+  },
+  "面": {
+    "chosen_meaning": "face or surface",
+    "other_meanings": [
+      "noodles",
+      "side or aspect",
+      "flour"
+    ]
+  },
+  "手": {
+    "chosen_meaning": "hand",
+    "other_meanings": [
+      "person skilled at something",
+      "method",
+      "measure word for skills or actions"
+    ]
+  },
+  "口": {
+    "chosen_meaning": "mouth",
+    "other_meanings": [
+      "entrance or opening",
+      "measure word for people",
+      "spoken language"
+    ]
+  },
+  "台": {
+    "chosen_meaning": "platform or stage",
+    "other_meanings": [
+      "machine or device counter",
+      "desk",
+      "Taiwan abbreviation"
+    ]
+  },
+  "机": {
+    "chosen_meaning": "machine",
+    "other_meanings": [
+      "opportunity",
+      "airplane",
+      "desk in some compounds"
+    ]
+  },
+  "长": {
+    "chosen_meaning": "long",
+    "other_meanings": [
+      "to grow",
+      "leader or chief",
+      "good at something"
+    ]
+  },
+  "重": {
+    "chosen_meaning": "heavy",
+    "other_meanings": [
+      "important",
+      "again or repeated",
+      "serious"
+    ]
+  },
+  "中": {
+    "chosen_meaning": "middle or center",
+    "other_meanings": [
+      "China",
+      "hit a target",
+      "during",
+      "among"
+    ]
+  },
+  "别": {
+    "chosen_meaning": "do not",
+    "other_meanings": [
+      "other",
+      "separate",
+      "distinguish"
+    ]
+  },
+  "意思": {
+    "chosen_meaning": "meaning",
+    "other_meanings": [
+      "intention",
+      "interest or fun",
+      "small token of appreciation"
+    ]
+  },
+  "银行": {
+    "chosen_meaning": "bank as a financial institution",
+    "other_meanings": [
+      "bank can also mean riverbank when written as 河岸 or 岸"
+    ]
+  },
+  "好": {
+    "chosen_meaning": "good",
+    "other_meanings": [
+      "easy to",
+      "very",
+      "to like in some compounds"
+    ]
+  },
+  "还": {
+    "chosen_meaning": "still",
+    "other_meanings": [
+      "also",
+      "yet",
+      "to return something"
+    ]
+  },
+  "给": {
+    "chosen_meaning": "to give",
+    "other_meanings": [
+      "for",
+      "to",
+      "passive marker in speech"
+    ]
+  },
+  "要": {
+    "chosen_meaning": "to want",
+    "other_meanings": [
+      "need to",
+      "will",
+      "important"
+    ]
+  },
+  "了": {
+    "chosen_meaning": "completed action marker",
+    "other_meanings": [
+      "change of state marker",
+      "understand when pronounced liao"
+    ]
+  },
+  "过": {
+    "chosen_meaning": "to pass or cross",
+    "other_meanings": [
+      "experienced action marker",
+      "too much",
+      "to spend time"
+    ]
+  },
+  "把": {
+    "chosen_meaning": "to hold or grasp",
+    "other_meanings": [
+      "object-disposal marker",
+      "handle",
+      "measure word"
+    ]
+  },
+  "对": {
+    "chosen_meaning": "correct",
+    "other_meanings": [
+      "toward",
+      "pair",
+      "to face"
+    ]
+  },
+  "到": {
+    "chosen_meaning": "to arrive",
+    "other_meanings": [
+      "up to",
+      "until",
+      "result complement"
+    ]
+  },
+  "起": {
+    "chosen_meaning": "to rise",
+    "other_meanings": [
+      "to start",
+      "from",
+      "measure word for incidents"
+    ]
+  },
+  "白": {
+    "chosen_meaning": "white",
+    "other_meanings": [
+      "clear",
+      "free of charge",
+      "for nothing",
+      "blank"
+    ]
+  },
+  "才": {
+    "chosen_meaning": "only then",
+    "other_meanings": [
+      "talent",
+      "just",
+      "not until"
+    ]
+  },
+  "场": {
+    "chosen_meaning": "field or place",
+    "other_meanings": [
+      "scene",
+      "measure word for events",
+      "market or open area"
+    ]
+  },
+  "差": {
+    "chosen_meaning": "difference",
+    "other_meanings": [
+      "poor or bad",
+      "to send on an errand",
+      "almost"
+    ]
+  },
+  "成": {
+    "chosen_meaning": "to become",
+    "other_meanings": [
+      "to succeed",
+      "complete",
+      "one tenth"
+    ]
+  },
+  "处": {
+    "chosen_meaning": "place",
+    "other_meanings": [
+      "to handle",
+      "department",
+      "to live together"
+    ]
+  },
+  "传": {
+    "chosen_meaning": "to pass on or transmit",
+    "other_meanings": [
+      "biography",
+      "legend",
+      "to spread"
+    ]
+  },
+  "带": {
+    "chosen_meaning": "to bring or carry",
+    "other_meanings": [
+      "belt",
+      "zone or area",
+      "to lead"
+    ]
+  },
+  "点": {
+    "chosen_meaning": "point or dot",
+    "other_meanings": [
+      "o'clock",
+      "a little",
+      "to order food",
+      "to select"
+    ]
+  },
+  "动": {
+    "chosen_meaning": "to move",
+    "other_meanings": [
+      "to touch",
+      "to use",
+      "change"
+    ]
+  },
+  "度": {
+    "chosen_meaning": "degree or measure",
+    "other_meanings": [
+      "time or occasion",
+      "to spend time",
+      "attitude"
+    ]
+  },
+  "分": {
+    "chosen_meaning": "minute or point",
+    "other_meanings": [
+      "to divide",
+      "part",
+      "score",
+      "cent"
+    ]
+  },
+  "服": {
+    "chosen_meaning": "clothing",
+    "other_meanings": [
+      "to take medicine",
+      "to obey",
+      "to convince"
+    ]
+  },
+  "干": {
+    "chosen_meaning": "dry",
+    "other_meanings": [
+      "to do",
+      "trunk or main part",
+      "to interfere"
+    ]
+  },
+  "关": {
+    "chosen_meaning": "to close or shut",
+    "other_meanings": [
+      "pass or checkpoint",
+      "relation",
+      "to concern"
+    ]
+  },
+  "管": {
+    "chosen_meaning": "pipe or tube",
+    "other_meanings": [
+      "to manage",
+      "to care about",
+      "to be in charge of"
+    ]
+  },
+  "过关": {
+    "chosen_meaning": "to pass a test or checkpoint",
+    "other_meanings": [
+      "to meet a standard",
+      "to get through a difficulty"
+    ]
+  },
+  "花": {
+    "chosen_meaning": "flower",
+    "other_meanings": [
+      "to spend money or time",
+      "pattern",
+      "fancy or colorful"
+    ]
+  },
+  "话": {
+    "chosen_meaning": "speech or words",
+    "other_meanings": [
+      "language",
+      "conversation",
+      "statement"
+    ]
+  },
+  "火": {
+    "chosen_meaning": "fire",
+    "other_meanings": [
+      "popular",
+      "anger",
+      "urgent or intense"
+    ]
+  },
+  "家": {
+    "chosen_meaning": "home or family",
+    "other_meanings": [
+      "specialist",
+      "school of thought",
+      "measure word for businesses"
+    ]
+  },
+  "见": {
+    "chosen_meaning": "to see",
+    "other_meanings": [
+      "to meet",
+      "opinion",
+      "to appear"
+    ]
+  },
+  "交": {
+    "chosen_meaning": "to hand over or deliver",
+    "other_meanings": [
+      "to make friends",
+      "to intersect",
+      "to pay"
+    ]
+  },
+  "节": {
+    "chosen_meaning": "festival or holiday",
+    "other_meanings": [
+      "section",
+      "joint",
+      "to save"
+    ]
+  },
+  "结": {
+    "chosen_meaning": "to tie or knot",
+    "other_meanings": [
+      "to form",
+      "result",
+      "to settle"
+    ]
+  },
+  "空": {
+    "chosen_meaning": "empty",
+    "other_meanings": [
+      "sky",
+      "free time",
+      "in vain"
+    ]
+  },
+  "老": {
+    "chosen_meaning": "old",
+    "other_meanings": [
+      "experienced",
+      "always",
+      "term of respect or familiarity"
+    ]
+  },
+  "立": {
+    "chosen_meaning": "to stand",
+    "other_meanings": [
+      "to establish",
+      "immediately",
+      "upright"
+    ]
+  },
+  "连": {
+    "chosen_meaning": "to connect",
+    "other_meanings": [
+      "even",
+      "successively",
+      "company in the military"
+    ]
+  },
+  "路": {
+    "chosen_meaning": "road or path",
+    "other_meanings": [
+      "way or method",
+      "route",
+      "line"
+    ]
+  },
+  "落": {
+    "chosen_meaning": "to fall",
+    "other_meanings": [
+      "to settle",
+      "village",
+      "to leave behind"
+    ]
+  },
+  "门": {
+    "chosen_meaning": "door or gate",
+    "other_meanings": [
+      "field of study",
+      "family or school",
+      "measure word for courses"
+    ]
+  },
+  "明": {
+    "chosen_meaning": "bright",
+    "other_meanings": [
+      "clear",
+      "next",
+      "to understand"
+    ]
+  },
+  "难": {
+    "chosen_meaning": "difficult",
+    "other_meanings": [
+      "disaster",
+      "hardship",
+      "to blame in compounds"
+    ]
+  },
+  "平": {
+    "chosen_meaning": "flat or level",
+    "other_meanings": [
+      "peaceful",
+      "equal",
+      "ordinary"
+    ]
+  },
+  "气": {
+    "chosen_meaning": "air or gas",
+    "other_meanings": [
+      "anger",
+      "weather",
+      "spirit or energy"
+    ]
+  },
+  "清": {
+    "chosen_meaning": "clear or pure",
+    "other_meanings": [
+      "to clean up",
+      "distinct",
+      "Qing dynasty"
+    ]
+  },
+  "求": {
+    "chosen_meaning": "to request or seek",
+    "other_meanings": [
+      "to demand",
+      "to pursue",
+      "to calculate"
+    ]
+  },
+  "认": {
+    "chosen_meaning": "to recognize",
+    "other_meanings": [
+      "to admit",
+      "to identify",
+      "to accept as"
+    ]
+  },
+  "少": {
+    "chosen_meaning": "few or little",
+    "other_meanings": [
+      "young",
+      "to lack",
+      "less"
+    ]
+  },
+  "声": {
+    "chosen_meaning": "sound or voice",
+    "other_meanings": [
+      "tone",
+      "reputation",
+      "measure word for sounds"
+    ]
+  },
+  "识": {
+    "chosen_meaning": "to know or recognize",
+    "other_meanings": [
+      "knowledge",
+      "to remember",
+      "insight"
+    ]
+  },
+  "数": {
+    "chosen_meaning": "number",
+    "other_meanings": [
+      "to count",
+      "several",
+      "fate in some contexts"
+    ]
+  },
+  "头": {
+    "chosen_meaning": "head",
+    "other_meanings": [
+      "beginning",
+      "end or tip",
+      "leader",
+      "measure word for animals"
+    ]
+  },
+  "万": {
+    "chosen_meaning": "ten thousand",
+    "other_meanings": [
+      "a great number",
+      "absolutely",
+      "surname"
+    ]
+  },
+  "望": {
+    "chosen_meaning": "to look into the distance",
+    "other_meanings": [
+      "hope",
+      "reputation",
+      "full moon"
+    ]
+  },
+  "向": {
+    "chosen_meaning": "toward",
+    "other_meanings": [
+      "direction",
+      "to face",
+      "formerly"
+    ]
+  },
+  "信": {
+    "chosen_meaning": "letter or message",
+    "other_meanings": [
+      "to believe",
+      "trust",
+      "information"
+    ]
+  },
+  "星": {
+    "chosen_meaning": "star",
+    "other_meanings": [
+      "celebrity",
+      "small spot",
+      "planet in compounds"
+    ]
+  },
+  "意": {
+    "chosen_meaning": "meaning or idea",
+    "other_meanings": [
+      "intention",
+      "wish",
+      "Italy abbreviation in compounds"
+    ]
+  },
+  "正": {
+    "chosen_meaning": "correct or proper",
+    "other_meanings": [
+      "currently",
+      "straight",
+      "main or principal"
+    ]
+  }
+}

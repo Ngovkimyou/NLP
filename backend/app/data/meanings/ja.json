@@ -1,0 +1,636 @@
+{
+  "上": {
+    "chosen_meaning": "up or above",
+    "other_meanings": [
+      "superior",
+      "surface",
+      "after or upon",
+      "to raise in compounds"
+    ]
+  },
+  "下": {
+    "chosen_meaning": "down or below",
+    "other_meanings": [
+      "inferior",
+      "under",
+      "to lower in compounds",
+      "later part"
+    ]
+  },
+  "生": {
+    "chosen_meaning": "life or birth",
+    "other_meanings": [
+      "raw",
+      "student",
+      "fresh",
+      "unprocessed"
+    ]
+  },
+  "日": {
+    "chosen_meaning": "day",
+    "other_meanings": [
+      "sun",
+      "Japan abbreviation",
+      "date"
+    ]
+  },
+  "本": {
+    "chosen_meaning": "book",
+    "other_meanings": [
+      "origin",
+      "main",
+      "counter for long objects",
+      "this"
+    ]
+  },
+  "人": {
+    "chosen_meaning": "person",
+    "other_meanings": [
+      "people",
+      "another person",
+      "counter-like reading in compounds"
+    ]
+  },
+  "手": {
+    "chosen_meaning": "hand",
+    "other_meanings": [
+      "skill",
+      "method",
+      "player or performer",
+      "move in a game"
+    ]
+  },
+  "気": {
+    "chosen_meaning": "spirit or feeling",
+    "other_meanings": [
+      "air",
+      "mind",
+      "intention",
+      "mood"
+    ]
+  },
+  "音": {
+    "chosen_meaning": "sound",
+    "other_meanings": [
+      "musical note",
+      "pronunciation",
+      "noise"
+    ]
+  },
+  "花": {
+    "chosen_meaning": "flower",
+    "other_meanings": [
+      "blossom",
+      "beauty",
+      "highlight of something"
+    ]
+  },
+  "橋": {
+    "chosen_meaning": "bridge",
+    "other_meanings": [
+      "connection between two things"
+    ]
+  },
+  "端": {
+    "chosen_meaning": "edge or end",
+    "other_meanings": [
+      "beginning",
+      "fragment",
+      "margin"
+    ]
+  },
+  "雨": {
+    "chosen_meaning": "rain",
+    "other_meanings": [
+      "falling objects in metaphorical use"
+    ]
+  },
+  "飴": {
+    "chosen_meaning": "candy",
+    "other_meanings": [
+      "sweet",
+      "reward in contrast with punishment"
+    ]
+  },
+  "切る": {
+    "chosen_meaning": "to cut",
+    "other_meanings": [
+      "to turn off",
+      "to hang up a call",
+      "to expire",
+      "to break off"
+    ]
+  },
+  "見る": {
+    "chosen_meaning": "to see or look at",
+    "other_meanings": [
+      "to watch",
+      "to check",
+      "to judge",
+      "to experience"
+    ]
+  },
+  "聞く": {
+    "chosen_meaning": "to hear",
+    "other_meanings": [
+      "to listen",
+      "to ask",
+      "to obey or follow advice"
+    ]
+  },
+  "掛ける": {
+    "chosen_meaning": "to hang or put on",
+    "other_meanings": [
+      "to call by phone",
+      "to spend time or money",
+      "to multiply",
+      "to sit down in some expressions"
+    ]
+  },
+  "会社": {
+    "chosen_meaning": "company",
+    "other_meanings": [
+      "workplace",
+      "business organization"
+    ]
+  },
+  "意味": {
+    "chosen_meaning": "meaning",
+    "other_meanings": [
+      "significance",
+      "intention",
+      "sense"
+    ]
+  },
+  "方": {
+    "chosen_meaning": "direction or side",
+    "other_meanings": [
+      "person in polite speech",
+      "way of doing something"
+    ]
+  },
+  "目": {
+    "chosen_meaning": "eye",
+    "other_meanings": [
+      "ordinal marker",
+      "appearance",
+      "mesh or stitch"
+    ]
+  },
+  "間": {
+    "chosen_meaning": "space or interval",
+    "other_meanings": [
+      "time period",
+      "relationship",
+      "room"
+    ]
+  },
+  "空": {
+    "chosen_meaning": "sky",
+    "other_meanings": [
+      "empty",
+      "vacant",
+      "air"
+    ]
+  },
+  "今日": {
+    "chosen_meaning": "today",
+    "other_meanings": [
+      "nowadays in some formal contexts"
+    ]
+  },
+  "明日": {
+    "chosen_meaning": "tomorrow",
+    "other_meanings": [
+      "future in poetic or figurative use"
+    ]
+  },
+  "開く": {
+    "chosen_meaning": "to open",
+    "other_meanings": [
+      "to hold an event",
+      "to become open",
+      "gap to widen"
+    ]
+  },
+  "入る": {
+    "chosen_meaning": "to enter",
+    "other_meanings": [
+      "to contain",
+      "to join",
+      "to be included"
+    ]
+  },
+  "取る": {
+    "chosen_meaning": "to take",
+    "other_meanings": [
+      "to remove",
+      "to record",
+      "to reserve",
+      "to earn"
+    ]
+  },
+  "掛かる": {
+    "chosen_meaning": "to take time or money",
+    "other_meanings": [
+      "to hang",
+      "to be locked",
+      "to start operating"
+    ]
+  },
+  "合う": {
+    "chosen_meaning": "to fit or suit",
+    "other_meanings": [
+      "to meet",
+      "to match",
+      "to do something together"
+    ]
+  },
+  "明ける": {
+    "chosen_meaning": "to dawn or become light",
+    "other_meanings": [
+      "to end a period",
+      "to open",
+      "to begin a new year or season"
+    ]
+  },
+  "朝": {
+    "chosen_meaning": "morning",
+    "other_meanings": [
+      "dynasty",
+      "period of rule"
+    ]
+  },
+  "頭": {
+    "chosen_meaning": "head",
+    "other_meanings": [
+      "mind",
+      "leader",
+      "beginning",
+      "counter for large animals"
+    ]
+  },
+  "後": {
+    "chosen_meaning": "after or behind",
+    "other_meanings": [
+      "later",
+      "remaining",
+      "back side"
+    ]
+  },
+  "雨戸": {
+    "chosen_meaning": "storm shutter",
+    "other_meanings": [
+      "protective sliding door"
+    ]
+  },
+  "入れる": {
+    "chosen_meaning": "to put in",
+    "other_meanings": [
+      "to include",
+      "to accept",
+      "to make tea or coffee"
+    ]
+  },
+  "色": {
+    "chosen_meaning": "color",
+    "other_meanings": [
+      "romance",
+      "appearance",
+      "sensuality"
+    ]
+  },
+  "写す": {
+    "chosen_meaning": "to copy",
+    "other_meanings": [
+      "to photograph",
+      "to project",
+      "to transcribe"
+    ]
+  },
+  "海": {
+    "chosen_meaning": "sea",
+    "other_meanings": [
+      "large amount",
+      "wide expanse"
+    ]
+  },
+  "表": {
+    "chosen_meaning": "front or surface",
+    "other_meanings": [
+      "table or chart",
+      "public side",
+      "outside"
+    ]
+  },
+  "思う": {
+    "chosen_meaning": "to think",
+    "other_meanings": [
+      "to feel",
+      "to expect",
+      "to remember fondly"
+    ]
+  },
+  "重い": {
+    "chosen_meaning": "heavy",
+    "other_meanings": [
+      "serious",
+      "important",
+      "slow or sluggish"
+    ]
+  },
+  "折る": {
+    "chosen_meaning": "to fold",
+    "other_meanings": [
+      "to break",
+      "to interrupt",
+      "to bend"
+    ]
+  },
+  "返す": {
+    "chosen_meaning": "to return something",
+    "other_meanings": [
+      "to flip over",
+      "to repeat",
+      "to send back"
+    ]
+  },
+  "紙": {
+    "chosen_meaning": "paper",
+    "other_meanings": [
+      "document",
+      "newspaper in compounds"
+    ]
+  },
+  "通う": {
+    "chosen_meaning": "to commute or attend regularly",
+    "other_meanings": [
+      "to go back and forth",
+      "to understand each other",
+      "to flow through"
+    ]
+  },
+  "変える": {
+    "chosen_meaning": "to change",
+    "other_meanings": [
+      "to alter",
+      "to transform",
+      "to exchange"
+    ]
+  },
+  "顔": {
+    "chosen_meaning": "face",
+    "other_meanings": [
+      "reputation",
+      "representative presence",
+      "expression"
+    ]
+  },
+  "角": {
+    "chosen_meaning": "corner or angle",
+    "other_meanings": [
+      "horn",
+      "bishop piece in shogi",
+      "square"
+    ]
+  },
+  "考える": {
+    "chosen_meaning": "to think or consider",
+    "other_meanings": [
+      "to plan",
+      "to imagine",
+      "to judge"
+    ]
+  },
+  "効く": {
+    "chosen_meaning": "to be effective",
+    "other_meanings": [
+      "to work well",
+      "to take effect",
+      "to be possible"
+    ]
+  },
+  "聞こえる": {
+    "chosen_meaning": "to be audible",
+    "other_meanings": [
+      "to sound like",
+      "to be understood as",
+      "to be well known"
+    ]
+  },
+  "切れる": {
+    "chosen_meaning": "to be cut",
+    "other_meanings": [
+      "to run out",
+      "to expire",
+      "to lose temper",
+      "to be sharp"
+    ]
+  },
+  "組む": {
+    "chosen_meaning": "to assemble or put together",
+    "other_meanings": [
+      "to form a team",
+      "to cross arms or legs",
+      "to schedule"
+    ]
+  },
+  "暮れる": {
+    "chosen_meaning": "to get dark",
+    "other_meanings": [
+      "to end",
+      "to be lost in thought",
+      "to be overwhelmed"
+    ]
+  },
+  "声": {
+    "chosen_meaning": "voice",
+    "other_meanings": [
+      "sound",
+      "opinion",
+      "reputation"
+    ]
+  },
+  "心": {
+    "chosen_meaning": "heart or mind",
+    "other_meanings": [
+      "feeling",
+      "intention",
+      "core"
+    ]
+  },
+  "込む": {
+    "chosen_meaning": "to be crowded",
+    "other_meanings": [
+      "to put into",
+      "to continue deeply",
+      "to include"
+    ]
+  },
+  "先": {
+    "chosen_meaning": "ahead or before",
+    "other_meanings": [
+      "previous",
+      "destination",
+      "tip",
+      "future"
+    ]
+  },
+  "差す": {
+    "chosen_meaning": "to shine or pour",
+    "other_meanings": [
+      "to point",
+      "to hold up an umbrella",
+      "to insert"
+    ]
+  },
+  "締める": {
+    "chosen_meaning": "to tighten",
+    "other_meanings": [
+      "to close",
+      "to conclude",
+      "to control expenses"
+    ]
+  },
+  "白い": {
+    "chosen_meaning": "white",
+    "other_meanings": [
+      "blank",
+      "innocent",
+      "pale"
+    ]
+  },
+  "立つ": {
+    "chosen_meaning": "to stand",
+    "other_meanings": [
+      "to rise",
+      "to be useful",
+      "to depart",
+      "to be established"
+    ]
+  },
+  "玉": {
+    "chosen_meaning": "ball or sphere",
+    "other_meanings": [
+      "jewel",
+      "coin",
+      "egg in some food contexts"
+    ]
+  },
+  "付く": {
+    "chosen_meaning": "to attach",
+    "other_meanings": [
+      "to be included",
+      "to notice",
+      "to follow",
+      "to be lit"
+    ]
+  },
+  "詰める": {
+    "chosen_meaning": "to pack or fill",
+    "other_meanings": [
+      "to shorten",
+      "to work at a place",
+      "to press someone for an answer"
+    ]
+  },
+  "飛ぶ": {
+    "chosen_meaning": "to fly",
+    "other_meanings": [
+      "to jump",
+      "to be scattered",
+      "to skip",
+      "to disappear suddenly"
+    ]
+  },
+  "流す": {
+    "chosen_meaning": "to let flow",
+    "other_meanings": [
+      "to play audio or video",
+      "to spread information",
+      "to ignore"
+    ]
+  },
+  "直す": {
+    "chosen_meaning": "to fix or repair",
+    "other_meanings": [
+      "to correct",
+      "to redo",
+      "to convert"
+    ]
+  },
+  "鳴る": {
+    "chosen_meaning": "to make a sound",
+    "other_meanings": [
+      "to ring",
+      "to echo",
+      "to become famous in set phrases"
+    ]
+  },
+  "乗る": {
+    "chosen_meaning": "to ride",
+    "other_meanings": [
+      "to get on",
+      "to be carried by",
+      "to join in",
+      "to be deceived"
+    ]
+  },
+  "早い": {
+    "chosen_meaning": "early",
+    "other_meanings": [
+      "fast",
+      "quick"
+    ]
+  },
+  "開ける": {
+    "chosen_meaning": "to open",
+    "other_meanings": [
+      "to empty",
+      "to clear space",
+      "to make a hole"
+    ]
+  },
+  "引く": {
+    "chosen_meaning": "to pull",
+    "other_meanings": [
+      "to subtract",
+      "to catch a cold",
+      "to look up in a dictionary",
+      "to draw a line"
+    ]
+  },
+  "細い": {
+    "chosen_meaning": "thin or narrow",
+    "other_meanings": [
+      "slender",
+      "weak",
+      "fine or detailed"
+    ]
+  },
+  "町": {
+    "chosen_meaning": "town",
+    "other_meanings": [
+      "district",
+      "street area",
+      "urban community"
+    ]
+  },
+  "回る": {
+    "chosen_meaning": "to turn or rotate",
+    "other_meanings": [
+      "to go around",
+      "to visit several places",
+      "to circulate"
+    ]
+  },
+  "持つ": {
+    "chosen_meaning": "to hold",
+    "other_meanings": [
+      "to own",
+      "to last",
+      "to carry",
+      "to have a feeling"
+    ]
+  }
+}
