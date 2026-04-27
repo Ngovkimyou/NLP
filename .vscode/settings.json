@@ -12,6 +12,7 @@
     "pypinyin",
     "Romaji",
     "ROMANIZER",
+    "shogi",
     "sokuon",
     "uvicorn",
     "venv"

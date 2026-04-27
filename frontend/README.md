@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend
+
+This folder contains the Next.js UI for Smart Translator. It lets users enter short text, select source and target languages, choose tone, trigger translation, copy results, review possible meanings, and restore previous translations from local session history.
+
+For the full project overview, architecture, and contributor guide, see the root `README.md`.
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
 
-```bash
+```powershell
+npm install
+```
+
+Run the development server:
+
+```powershell
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The backend should also be running at `http://localhost:8000` unless you configure a different API URL.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment
 
-## Learn More
+The frontend resolves the API base URL in this order:
 
-To learn more about Next.js, take a look at the following resources:
+1. `NEXT_PUBLIC_API_URL`, if set.
+2. `/_/backend`, when deployed outside localhost.
+3. `http://localhost:8000`, for local development.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Optional local `.env` example:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
 
-## Deploy on Vercel
+## Important Files
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `app/page.tsx`: Main translator UI, API calls, debounce behavior, copy controls, and translation history.
+- `app/layout.tsx`: App metadata and font setup.
+- `app/globals.css`: Tailwind import, theme variables, and global body styling.
+- `package.json`: Next.js scripts and frontend dependencies.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Scripts
+
+```powershell
+npm run dev
+npm run lint
+npm run build
+npm run start
+```
+
+## Implementation Notes
+
+- The page is a client component because it manages text input, network requests, copy state, and local translation history.
+- Auto-translate uses a short debounce to avoid sending a request on every keystroke.
+- Stale responses are ignored with an incrementing request id.
+- The UI enforces the same 100-character limit as the backend.
+- Manual translations are saved to local React state history, capped at 10 items.

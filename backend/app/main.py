@@ -4,7 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
-from app.middleware.rate_limit import RateLimitMiddleware
+# from app.middleware.rate_limit import RateLimitMiddleware
 from app.routes.translate import router as translate_router
 
 app = FastAPI(
@@ -13,12 +13,13 @@ app = FastAPI(
     version="0.1.0",
 )
 
-app.add_middleware(
-    RateLimitMiddleware,
-    max_requests=10,
-    window_seconds=60,
-    protected_paths={"/translate"},
-)
+# Temporarily disabled for demo:
+# app.add_middleware(
+#     RateLimitMiddleware,
+#     max_requests=10,
+#     window_seconds=60,
+#     protected_paths={"/translate"},
+# )
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
